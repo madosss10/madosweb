@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moja Własna Strona</title>
+  <style>
+    body {font-family: Arial black; margin: 0; padding: 0; background: #f0f0f0;}
+    header, footer {background: #322acc; color: red; text-align: center; padding: 10px;}
+    nav a {color: gold; margin: 0 10px; text-decoration: none;}
+    section {display: none; padding: 20px; background: white;}
+    .active {display: block;}
+    .left {text-align: left;}
+    .right {text-align: right;}
+    img {max-width: 100%; height: auto;}
+    video {max-width: 100%;}
+    footer {margin-top: 10px;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>2 Ciekawostki</h1>
+  <nav>
+    <a href="#" onclick="showPage('start')">Ciekawostki</a>
+    <a href="#" onclick="showPage('o_mnie')">O mnie</a>
+    <a href="#" onclick="showPage('media')">Zdjęcie/Film</a>
+    <a href="#" onclick="showPage('kontakt')">Kontakt</a>
+  </nav>
+</header>
+
+<section id="Ciekawostki" class="active">
+  <h2>CiEkAwOsTkI</h2>
+  <p class="left">Cześć! Woda kokosowa ma niemal identyczny skład jak osocze ludzkiej krwi. W trakcie II wojny światowej ranni żołnierze przetaczali ją sobie zamiast krwi.</p>
+  <p class="right">Oprócz pięciu zmysłów człowiek ma zmysł pozwalający na szczegółowe określenie położenia swoich części ciała bez konieczności patrzenia na nie.</p>
+</section>
+
+<section id="o_mnie">
+  <h2>O mnie</h2>
+  <p class="left">Mam na imię Maciej i uczę się w technikum, jestem w 4klasie.</p>
+  <p class="right">Dopiero uczę się tworzyć strony.</p>
+</section>
+
+<section id="media">
+  <h2>Film/Zdjęcie</h2>
+  <img src="https://picsum.photos/200/300" alt="Zdjęcie">
+  <video controls>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+  </video>
+  <p><a href="https://www.totalcasino.pl/casinolive" target="_blank">Link do slotów</a></p>
+</section>
+<p><a href="https://www.youtube.com/watch?v=wPXjl29ZbLg&t=1096s"
+target="_blank">Link do muzyki</a></p>
+</section>
+<section id="kontakt">
+  <h2>Kontakt</h2>
+  <p class="left">E-mail: madosowskyyy@gmail.com</p>
+  <p class="right">Telefon: 000-777-000</p>
+</section>
+
+<footer>
+  MADE BY Maciej Błoński
+</footer>
+
+<script>
+  function showPage(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
